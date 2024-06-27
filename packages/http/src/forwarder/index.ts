@@ -68,7 +68,7 @@ const forward: IPrismComponents<IHttpOperation, IHttpRequest, IHttpResponse, IHt
             agent: proxyAgent,
             body,
             method: input.method,
-            headers: defaults(omit(input.headers, ['host', 'transfer-encoding']), {
+            headers: defaults(omit(input.headers, ['host']), {
               'accept-encoding': '*',
               accept: 'application/json, text/plain, */*',
               'user-agent': `Prism/${prismVersion}`,
